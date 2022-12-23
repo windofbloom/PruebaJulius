@@ -1,0 +1,228 @@
+/*
+Theme Name: Karla Template
+Author: Karla
+Author URI: https://wordpress.org/
+Description: Prueba Julius
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: karla-template
+*/
+
+/***** Custom Properties ****/
+:root {
+    --first-color: rgb(240, 142, 35);
+    --first-alpha-color: rgb(240, 142, 35, 0.80);
+    --second-color: rgb(145, 38, 143);
+    --second-alpha-color: rgb(145, 38, 143, 0.80);
+    --third-color: rgb(50, 50, 50);
+}
+
+/* General */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Logo*/
+.navbar-brand img {
+    width: auto;
+    height: 50px;
+}
+
+/*Navegación*/
+.bg-dark {
+    background: rgba(145, 38, 143, 0.671)!important;
+}
+
+.nav-item {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+.nav-link:before,
+.nav-link:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: var(--first-color);
+  transition: 0.5s;
+}
+
+.nav-link:after {
+    left: 0;
+    bottom: -10px;
+  }
+  .nav-link:before {
+    right: 0;
+    top: -10px;
+  }
+  .nav-link:hover {
+    color: #ffffff;
+  }
+  .nav-link:hover:after,
+  .nav-link:hover:before {
+    width: 100%;
+  }
+
+  @media screen and (min-width:300px) and (max-width:985px) { 
+    .nav-link {
+        padding: 10px;
+    }
+ }
+
+/*Carousel*/
+.title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3em;
+    color:#ffffff;
+    margin-top: 8em!important;
+    text-shadow: 2px 2px 10px #000;
+}
+
+.subtitle {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3em;
+    color:#ffffff;
+    text-shadow: 2px 2px 10px #000;
+}
+
+@media screen and (min-width:300px) and (max-width:766px) { 
+    .title {
+        font-size: 1.5em;
+        margin-top: 3em!important;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width:1000px) { 
+    .title {
+        font-size: 3em;
+        margin-top: 2em!important;
+    }
+    
+    .subtitle {
+        font-size: 2.8em;
+    }
+    
+}
+
+/*Footer*/
+.bg-purple {
+    background-color: var(--second-color)!important;
+}
+
+.f-title {
+    color: var(--first-color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.f-link {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.f-link:hover {
+    color:#ffffff;
+}
+
+/*Main section*/
+.headlines {
+    color: var(--first-color);
+}
+
+.boton {
+    background: 
+      linear-gradient(var(--first-color) 0 0) no-repeat
+      calc(200% - var(--i,0)*100%) 100% / 200% calc(100%*var(--i,0) + .08em);
+    transition: .3s calc(var(--i,0)*.3s), background-position .3s calc(.3s - calc(var(--i,0)*.3s));
+    border-radius: 0!important;
+    color: var(--second-alpha-color);
+    border-color: var(--first-color);
+  }
+  
+  .boton:hover {
+    --i: 1;
+    border-color: var(--first-color);
+    color:#ffffff;
+  }
+
+  .boton2 {
+    background: 
+      linear-gradient(var(--first-color) 0 0) no-repeat
+      calc(200% - var(--i,0)*100%) 100% / 200% calc(100%*var(--i,0) + .08em);
+    transition: .3s calc(var(--i,0)*.3s), background-position .3s calc(.3s - calc(var(--i,0)*.3s));
+    border-radius: 0!important;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  
+  .boton2:hover {
+    --i: 1;
+    border-color: var(--first-color);
+    color:#ffffff;
+  }
+
+  .img-fluid {
+    border-radius: 150px 150px 0 0;
+    filter: drop-shadow(-6px -11px 0px var(--first-color));
+}
+
+.bg-orange {
+    background-color: var(--first-color)!important;
+}
+
+/*Cards carusel Sercices - Industries*/
+.card {
+    border: none;
+    filter: drop-shadow(-6px -11px 0px var(--first-color));
+}
+
+.card-title {
+    color: var(--first-color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        margin: 0 2em;
+        width: calc(100%/3);
+    }
+    
+}
+
+/*Contacto*/
+.form-control {
+    border-radius: 0;
+}
+
+.parallax-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 50vh;
+    color:#ffffff;
+  }
+  
+  .parallax-item:first-child {
+    background: linear-gradient(rgb(240 142 35 / 53%), rgb(145 38 143 / 53%)),url("img/team-working.jpg");
+    background-size: cover;
+    filter: brightness(0.9);
+  }
